@@ -1,11 +1,15 @@
 let bodyEl = document.getElementById("body")
 let colorEl = document.getElementById("color")
 let textEl = document.getElementById("textWrite")
-let inputEl = document.getElementById("textinput")
+let inputfirstEl = document.getElementById("textinputFirst")
+let inputlastEl = document.getElementById("textinputLast")
 let submitEl = document.getElementById("submitBtn")
 let scrollEl = document.getElementById("scrollMenu")
 let sizeEl = document.getElementById("textHeigt")
-let nameEl = document.getElementById("nameBtn")
+let firstnameEl = document.getElementById("firstnameBtn")
+let lastnameEl = document.getElementById("lastnameBtn")
+
+// nameEl
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff"]
 let incorrectColor = ["#000000", "#ff0000"]
@@ -28,7 +32,7 @@ function changeColors(e) {
 
         else if (incorrectColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())){
             console.log("Not correct")
-            //window.close()
+           // window.close()
         }
 
         else {
@@ -42,13 +46,12 @@ function changeColors(e) {
 }
 
 submitEl.addEventListener("click", changeColors)
-inputEl.addEventListener("input", changeText)
+inputfirstEl.addEventListener("input", changeText)
 
 function changeText() {
-    let textChange = inputEl.value;
+    let textChange = inputfirstEl.value;
     textEl.innerText = textChange;
     console.log("text")
-    
 }
 
 scrollEl.addEventListener("change", changeTextTag)
@@ -62,12 +65,13 @@ function changeTextTag(){
     newEl.innerText = sizeEl.innerText
 
     sizeEl.replaceWith(newEl)
-
     sizeEl = newEl
 }
 
-insertText.addEventListener("click", helloPerson)
+firstnameEl.addEventListener("click", helloPerson)
 
-function helloPerson (){
-    console.log("It works!")
+function helloPerson(){
+    console.log(inputfirstEl.value)
+    let personName = inputfirstEl.value;
+    alert("Hello " + personName)
 }
