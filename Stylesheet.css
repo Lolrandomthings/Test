@@ -11,3 +11,23 @@
  height: 100%;
  width: auto;
 } */
+
+#byeBody {
+    overflow: hidden;
+    background-color: #000000;
+    color: #ff0000;
+}
+
+#byeText {
+    font-size: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+#byeBtn{
+    background-color: #000000;
+    padding: 50px 70px;
+    border-radius: 50%;
+    size: 100px;
+    border: #000000;
+}
