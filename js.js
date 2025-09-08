@@ -1,14 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const submitEl = document.getElementById("submitBtn");
-    const inputfirstEl = document.getElementById("textinputFirst");
-    const inputlastEl = document.getElementById("textinputLast");
-    const scrollEl = document.getElementById("scrollMenu");
-    const nameEl = document.getElementById("namebtn");
-    const openEl = document.getElementById("byeBtn");
-    const textEl = document.getElementById("textWrite")
-    const helloEl = document.getElementById("helloWrite")
-    const sizeEl = document.getElementById("textHeigt")
-
+    let submitEl = document.getElementById("submitBtn");
+    let nameEl = document.getElementById("namebtn");
+    let openEl = document.getElementById("byeBtn");
+    
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
@@ -17,8 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (openEl) openEl.addEventListener("click", openSite);
 });
 
-const bodyEl = document.getElementById("body")
-const colorEl = document.getElementById("color")
+let scrollEl = document.getElementById("scrollMenu");
+let bodyEl = document.getElementById("body")
+let colorEl = document.getElementById("color")
+let sizeEl = document.getElementById("textHeigt")
+let inputfirstEl = document.getElementById("textinputFirst");
+let inputlastEl = document.getElementById("textinputLast");
+let textEl = document.getElementById("textWrite")
+let helloEl = document.getElementById("helloWrite")
 
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff"]
@@ -45,7 +45,7 @@ function changeColors(e) {
 
         else {
             alert("Try again ")
-            //bodyEl.style.backgroundColor = "#FFFFFF"
+            bodyEl.style.backgroundColor = "#FFFFFF"
             console.log("Try again")
         }
     }
@@ -73,7 +73,7 @@ function changeTextTag(){
     newEl.innerText = sizeEl.innerText
 
     sizeEl.replaceWith(newEl)
-    sizeEl = newEl
+    sizeEl = newEl;
 }
 
 function helloPerson(){
