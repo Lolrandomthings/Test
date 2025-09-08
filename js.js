@@ -6,8 +6,7 @@ let inputlastEl = document.getElementById("textinputLast")
 let submitEl = document.getElementById("submitBtn")
 let scrollEl = document.getElementById("scrollMenu")
 let sizeEl = document.getElementById("textHeigt")
-let firstnameEl = document.getElementById("firstnameBtn")
-let lastnameEl = document.getElementById("lastnameBtn")
+let nameEl = document.getElementById("namebtn")
 
 // nameEl
 
@@ -32,7 +31,7 @@ function changeColors(e) {
 
         else if (incorrectColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())){
             console.log("Not correct")
-           // window.close()
+            window.close()
         }
 
         else {
@@ -47,11 +46,14 @@ function changeColors(e) {
 
 submitEl.addEventListener("click", changeColors)
 inputfirstEl.addEventListener("input", changeText)
+inputlastEl.addEventListener("input", changeText)
 
 function changeText() {
-    let textChange = inputfirstEl.value;
-    textEl.innerText = textChange;
-    console.log("text")
+    let first = inputfirstEl.value;
+    let last = inputlastEl.value
+
+    textEl.innerText = first + " " + last;
+    console.log("Name")
 }
 
 scrollEl.addEventListener("change", changeTextTag)
@@ -68,10 +70,12 @@ function changeTextTag(){
     sizeEl = newEl
 }
 
-firstnameEl.addEventListener("click", helloPerson)
+nameEl.addEventListener("click", helloPerson)
 
 function helloPerson(){
     console.log(inputfirstEl.value)
-    let personName = inputfirstEl.value;
-    alert("Hello " + personName)
+    let personfirstName = inputfirstEl.value;
+    let personlastName = inputlastEl.value
+    alert("Hello " + personfirstName + " " + personlastName)
 }
+
