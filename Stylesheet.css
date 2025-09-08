@@ -15,13 +15,18 @@
 #byeBody {
     overflow: hidden;
     background-color: #000000;
+    
+}
+
+#byeText1 {
+    font-size: 230px;
+    display: flex;
+    justify-content: center;
     color: #ff0000;
 }
 
-#byeText {
-    font-size: 280px;
-    display: flex;
-    justify-content: center;
+#byeText2{
+    color: #0a0a0a;
 }
 
 #byeBtn{

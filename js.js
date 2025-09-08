@@ -25,8 +25,6 @@ let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00f
 let incorrectColor = ["#000000", "#ff0000"]
 
 
-// Function to change background color
-
 function changeColors(e) {
     e.preventDefault()
     let changeColors = colorEl.value.trim()
@@ -47,7 +45,7 @@ function changeColors(e) {
 
         else {
             alert("Try again ")
-            bodyEl.style.backgroundColor = "#FFFFFF"
+            //bodyEl.style.backgroundColor = "#FFFFFF"
             console.log("Try again")
         }
     }
