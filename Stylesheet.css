@@ -1,3 +1,22 @@
+/* index.html */
+#body {
+    background-color: #e6e6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 45%;
+    font-size: 25px;
+    position: absolute;
+}
+
+#textHeigtStyle{
+    justify-content: baseline;
+}
+
+
+/* bye.html */
 #byeBody {
     overflow: hidden;
     background-color: #000000;
@@ -20,24 +39,31 @@
     border-radius: 50%;
     size: 100px;
     border: #000000;
+    position: absolute;
 }
 
+
+/* hello.html */
 #helloBody{
     background-color: #005885;
 }
 
-#helloText {
+#helloText1 {
     font-size: 230px;
     display: flex;
     justify-content: center;
     color: #b7d4e1;
     text-shadow:  30px 10px #004466;
-;
 }
 
+#helloText2 {
+    color: #b7d4e1;
+}
+ 
 #helloBtn{
     background-color: #005885;
     border: none;
-    padding: 30px 50px;
+    padding: 130px 150px;
     color: #b7d4e1;
+    position: absolute
 }

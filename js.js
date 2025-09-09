@@ -9,8 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (nameEl) nameEl.addEventListener("click", helloPerson);
-    if (openbyeEl) openbyeEl.addEventListener("click", openSite);
-    if (openhelloEl) openhelloEl.addEventListener("click", openSite)
+    if (openbyeEl) {
+        openbyeEl.addEventListener("click", openSite);
+        
+    let maxX = window.innerWidth - openbyeEl.offsetWidth;
+    let maxY = window.innerHeight - openbyeEl.offsetHeight;
+
+    let randomX = Math.floor(Math.random() * maxX)
+    let randomY = Math.floor(Math.random() * maxY)
+
+    openbyeEl.style.left = randomX + "px";
+    openbyeEl.style.top = randomY + "px"    
+
+    }
+    if (openhelloEl) {
+        openhelloEl.addEventListener("click", openSite)
+
+    let maxX = window.innerWidth - openhelloEl.offsetWidth;
+    let maxY = window.innerHeight - openhelloEl.offsetHeight;
+
+    let randomX = Math.floor(Math.random() * maxX)
+    let randomY = Math.floor(Math.random() * maxY)
+
+    openhelloEl.style.left = randomX + "px";
+    openhelloEl.style.top = randomY + "px"
+}
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -47,7 +70,7 @@ function changeColors(e) {
 
         else {
             alert("Try again ")
-            bodyEl.style.backgroundColor = "#FFFFFF"
+            bodyEl.style.backgroundColor = "#e6e6fa"
             console.log("Try again")
         }
     }
