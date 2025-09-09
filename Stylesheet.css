@@ -21,3 +21,23 @@
     size: 100px;
     border: #000000;
 }
+
+#helloBody{
+    background-color: #005885;
+}
+
+#helloText {
+    font-size: 230px;
+    display: flex;
+    justify-content: center;
+    color: #b7d4e1;
+    text-shadow:  30px 10px #004466;
+;
+}
+
+#helloBtn{
+    background-color: #005885;
+    border: none;
+    padding: 30px 50px;
+    color: #b7d4e1;
+}

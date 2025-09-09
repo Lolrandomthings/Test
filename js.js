@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     let submitEl = document.getElementById("submitBtn");
     let nameEl = document.getElementById("namebtn");
-    let openEl = document.getElementById("byeBtn");
+    let openbyeEl = document.getElementById("byeBtn");
+    let openhelloEl = document.getElementById("helloBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (nameEl) nameEl.addEventListener("click", helloPerson);
-    if (openEl) openEl.addEventListener("click", openSite);
+    if (openbyeEl) openbyeEl.addEventListener("click", openSite);
+    if (openhelloEl) openhelloEl.addEventListener("click", openSite)
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -21,7 +23,7 @@ let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
 
 
-let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff"]
+let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6"]
 let incorrectColor = ["#000000", "#ff0000"]
 
 
@@ -35,7 +37,7 @@ function changeColors(e) {
 
         if (correctColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())) {
             console.log("Correct color!")
-            alert("Correct")
+            window.location.replace("Hello.html")
         }
 
         else if (incorrectColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())){
@@ -87,3 +89,5 @@ function openSite (){
     console.log("Clicked")
     window.location.replace("Index.html")
 }
+
+// what should I do?
