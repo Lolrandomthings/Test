@@ -1,22 +1,25 @@
 /* index.html */
 #body {
-    background-color: #e6e6fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 15%;
-    margin-left: 45%;
-    font-size: 25px;
-    position: absolute;
+   background-color: #e6e6fa;
+   font-size: 25px;
 }
 
 #textHeigtStyle{
     justify-content: baseline;
 }
 
+#secretBtn{
+    background-color: red;
+    padding: 50px 70px;
+    border-radius: 50%;
+    size: 100px;
+    border: none;
+    position: fixed;
+    z-index: 999;
+}
 
 /* bye.html */
+
 #byeBody {
     overflow: hidden;
     background-color: #000000;
@@ -45,6 +48,7 @@
 
 /* hello.html */
 #helloBody{
+    overflow: hidden;
     background-color: #005885;
 }
 

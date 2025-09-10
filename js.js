@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nameEl = document.getElementById("namebtn");
     let openbyeEl = document.getElementById("byeBtn");
     let openhelloEl = document.getElementById("helloBtn")
+    let opensecretEl = document.getElementById("secretBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -34,6 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
     openhelloEl.style.left = randomX + "px";
     openhelloEl.style.top = randomY + "px"
 }
+
+    if (opensecretEl){
+        opensecretEl.addEventListener("click", openSecretsite)
+
+    let maxX = window.innerWidth - opensecretEl.offsetWidth;
+    let maxY = window.innerHeight - opensecretEl.offsetHeight;
+
+    let randomX = Math.floor(Math.random() * maxX)
+    let randomY = Math.floor(Math.random() * maxY)
+
+    opensecretEl.style.left = randomX + "px";
+    opensecretEl.style.top = randomY + "px"
+    }
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -111,6 +125,10 @@ function helloPerson(){
 function openSite (){
     console.log("Clicked")
     window.location.replace("Index.html")
+}
+
+function openSecretsite (){
+    window.location.replace("Secret.html")
 }
 
 // what should I do?
