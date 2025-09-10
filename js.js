@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     opensecretEl.style.left = randomX + "px";
     opensecretEl.style.top = randomY + "px"
     }
+
+    setupRandomReturn(["colors", "colorsGood", "colorsBad"]); 
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -132,3 +134,22 @@ function openSecretsite (){
 }
 
 // what should I do?
+function setupRandomReturn(containerIds) {
+  // collect all buttons
+  const buttons = containerIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean)
+    .flatMap(container => Array.from(container.querySelectorAll("button")));
+
+  if (!buttons.length) return;
+
+  // pick a random winner for this page load
+  const winner = buttons[Math.floor(Math.random() * buttons.length)];
+
+  // hook only the winner
+  winner.addEventListener("click", () => {
+    window.location.replace("Index.html");
+  });
+
+  // others do nothing (no event listeners needed)
+}

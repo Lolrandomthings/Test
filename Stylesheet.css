@@ -9,7 +9,7 @@
 }
 
 #secretBtn{
-    background-color: red;
+    background-color: #e6e6fa;
     padding: 50px 70px;
     border-radius: 50%;
     size: 100px;
@@ -68,6 +68,116 @@
     background-color: #005885;
     border: none;
     padding: 130px 150px;
-    color: #b7d4e1;
     position: absolute
+}   
+
+/* Secret.html */
+
+#secretBody{
+    background-color: #e6e6fa;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button{
+    width: 100px;
+    height: auto;
+}
+
+#colorGood1{
+    background-color:#FFFFFF ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+} 
+#colorGood2{
+    background-color:#b7d4e1 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood3{
+    background-color: #00fbff;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood4{
+    background-color:#00aeff ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood5{
+    background-color:#00aaff ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood6{
+    background-color:#0c73a6 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood7{
+    background-color:#005885 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorGood8{
+    background-color:#004466 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+#colorBad1{
+    background-color:#ff0000 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+#colorBad2{
+    background-color:#000000 ;
+    margin: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;    
+    border: none;
+    display: flex;
+    justify-content: center;
 }
