@@ -124,6 +124,15 @@ function helloPerson(){
     alert("Hello " + personfirstName + " " + personlastName)
 }
 
+function S(){
+//nameEl 
+// inputfirstEl
+// Make a function that when any if the letters J, E, Z, Q, P is in the name, it will open a secret new side
+
+}
+
+
+
 function openSite (){
     console.log("Clicked")
     window.location.replace("Index.html")
@@ -150,6 +159,4 @@ function setupRandomReturn(containerIds) {
   winner.addEventListener("click", () => {
     window.location.replace("Index.html");
   });
-
-  // others do nothing (no event listeners needed)
 }
