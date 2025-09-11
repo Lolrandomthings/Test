@@ -69,6 +69,8 @@ let incorrectColor = ["#000000", "#ff0000"]
 // let lettersFirst = ["J", "E", "G", "H", "Z"]
 // let lettersLast = ["Q","D","M","N","F"]
 
+let name = ["Jay", "Julia"]
+
 function changeColors(e) {
     e.preventDefault()
     let changeColors = colorEl.value.trim()
@@ -136,9 +138,7 @@ function openSecretsite (){
     window.location.replace("Secret.html")
 }
 
-// what should I do?
 function setupRandomReturn(containerIds) {
-  // collect all buttons
   const buttons = containerIds
     .map(id => document.getElementById(id))
     .filter(Boolean)
@@ -146,10 +146,8 @@ function setupRandomReturn(containerIds) {
 
   if (!buttons.length) return;
 
-  // pick a random winner for this page load
   const winner = buttons[Math.floor(Math.random() * buttons.length)];
 
-  // hook only the winner
   winner.addEventListener("click", () => {
     window.location.replace("Index.html");
   });
