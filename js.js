@@ -65,6 +65,9 @@ let helloEl = document.getElementById("helloWrite")
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6"]
 let incorrectColor = ["#000000", "#ff0000"]
 
+// Maybe make in the future
+// let lettersFirst = ["J", "E", "G", "H", "Z"]
+// let lettersLast = ["Q","D","M","N","F"]
 
 function changeColors(e) {
     e.preventDefault()
@@ -123,15 +126,6 @@ function helloPerson(){
     let personlastName = inputlastEl.value
     alert("Hello " + personfirstName + " " + personlastName)
 }
-
-function S(){
-//nameEl 
-// inputfirstEl
-// Make a function that when any if the letters J, E, Z, Q, P is in the name, it will open a secret new side
-
-}
-
-
 
 function openSite (){
     console.log("Clicked")
