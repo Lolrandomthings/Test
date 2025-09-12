@@ -181,3 +181,13 @@ button{
     display: flex;
     justify-content: center;
 }
+
+/* NameSame.html */
+#nameJayBtn{
+    background-color: #00aeff;
+    padding: 50px 70px;
+    border-radius: 4%;
+    size: 100px;
+    border: #000000;
+    position: absolute;
+}

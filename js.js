@@ -4,12 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let openbyeEl = document.getElementById("byeBtn");
     let openhelloEl = document.getElementById("helloBtn")
     let opensecretEl = document.getElementById("secretBtn")
+    let nameJayEl = document.getElementById("nameJayBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
+    if (nameJayEl) nameJayEl.addEventListener("click", addtext);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
-    if (nameEl) nameEl.addEventListener("click", helloPerson);
+    if (nameEl) {
+        nameEl.addEventListener("click", () => {
+            helloPerson();
+            nameIsCorrect();
+        });
+    }
     if (openbyeEl) {
         openbyeEl.addEventListener("click", openSite);
         
@@ -56,11 +63,10 @@ let scrollEl = document.getElementById("scrollMenu");
 let bodyEl = document.getElementById("body")
 let colorEl = document.getElementById("color")
 let sizeEl = document.getElementById("textHeigt")
-let inputfirstEl = document.getElementById("textinputFirst");
+let inputfirstEl = document.getElementById("textinputFirst"); 
 let inputlastEl = document.getElementById("textinputLast");
 let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
-
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6"]
 let incorrectColor = ["#000000", "#ff0000"]
@@ -69,7 +75,7 @@ let incorrectColor = ["#000000", "#ff0000"]
 // let lettersFirst = ["J", "E", "G", "H", "Z"]
 // let lettersLast = ["Q","D","M","N","F"]
 
-let name = ["Jay", "Julia"]
+let correctName = "Jay"
 
 function changeColors(e) {
     e.preventDefault()
@@ -129,6 +135,13 @@ function helloPerson(){
     alert("Hello " + personfirstName + " " + personlastName)
 }
 
+function nameIsCorrect() {
+    let firstName = inputfirstEl.value.toUpperCase();
+    if (firstName === correctName.toUpperCase()) {
+        window.location.replace("NameSame.html") 
+    }
+}
+
 function openSite (){
     console.log("Clicked")
     window.location.replace("Index.html")
@@ -152,3 +165,5 @@ function setupRandomReturn(containerIds) {
     window.location.replace("Index.html");
   });
 }
+
+function
