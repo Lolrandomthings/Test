@@ -117,8 +117,10 @@ let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
 let inputpasswordEl = document.getElementById("inputPassword")
 
-let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6"]
-let incorrectColor = ["#000000", "#ff0000"]
+let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6", "#e6e6fa"]
+//maybe a correct color? #a3e6fa
+
+let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
 
 // Maybe make in the future
 // let lettersFirst = ["J", "E", "G", "H", "Z"]
@@ -222,6 +224,6 @@ function guessPassword (){
         window.location.replace("Index.html")
     }
     else {
-        alert("Need a clue? Look closely at the text")
+        alert("Need a clue? Look closely at the text, the password is in there")
     }
 }
