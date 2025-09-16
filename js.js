@@ -6,17 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let opensecretEl = document.getElementById("secretBtn")
     let nameJayEl = document.getElementById("nameJayBtn")
     let fakebuttonEl = document.getElementById("fakeBtn")
+    let hoverbuttonEl = document.getElementById("hoverBtn")
+    let passwordEl = document.getElementById("passwordBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
+    if (passwordEl) passwordEl.addEventListener("click", guessPassword);
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
             nameIsCorrect();
         });
     }
+
     if (openbyeEl) {
         openbyeEl.addEventListener("click", openSite);
         
@@ -28,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openbyeEl.style.left = randomX + "px";
     openbyeEl.style.top = randomY + "px"    
-
     }
+
     if (openhelloEl) {
         openhelloEl.addEventListener("click", openSite)
 
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openhelloEl.style.left = randomX + "px";
     openhelloEl.style.top = randomY + "px"
-}
+    }
 
     if (opensecretEl){
         opensecretEl.addEventListener("click", openSecretsite)
@@ -70,16 +74,36 @@ document.addEventListener("DOMContentLoaded", () => {
         fakebuttonEl.style.left = randomX + "px"
         fakebuttonEl.style.top = randomY + "px"
     }
+    
+    if (fakebuttonEl) {
+        fakebuttonEl.addEventListener("click", () =>{
+        document.getElementById("fakeText").style.display = 'block';
+        });
+    }
+
     if (nameJayEl) {
         nameJayEl.addEventListener("click", () => {
         document.getElementById("secretText").style.display = 'block';
         });
     }
 
-    if (fakebuttonEl) {
-        fakebuttonEl.addEventListener("click", () =>{
-        document.getElementById("fakeText").style.display = 'block';
-        });
+    if (hoverbuttonEl) {
+        hoverbuttonEl.addEventListener("mouseover", hoverbuttonEl )
+
+        let maxX = window.innerWidth - hoverbuttonEl.offsetWidth;
+        let maxY = window.innerHeight - hoverbuttonEl.offsetHeight;
+
+        let randomX = Math.floor(Math.random() * maxX)
+        let randomY = Math.floor(Math.random() * maxY)
+
+        hoverbuttonEl.style.left = randomX + "px"
+        hoverbuttonEl.style.top = randomY + "px"
+    }
+
+    if (hoverbuttonEl) {
+        hoverbuttonEl.addEventListener("mouseover", () => {
+            document.getElementById("password").style.display = 'block';
+        })
     }
 });
 
@@ -91,6 +115,7 @@ let inputfirstEl = document.getElementById("textinputFirst");
 let inputlastEl = document.getElementById("textinputLast");
 let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
+let inputpasswordEl = document.getElementById("inputPassword")
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6"]
 let incorrectColor = ["#000000", "#ff0000"]
@@ -100,6 +125,7 @@ let incorrectColor = ["#000000", "#ff0000"]
 // let lettersLast = ["Q","D","M","N","F"]
 
 let correctName = "Jay"
+let correctPassword = "RedVelvetCake"
 
 function changeColors(e) {
     e.preventDefault()
@@ -190,3 +216,12 @@ function setupRandomReturn(containerIds) {
   });
 }
 
+function guessPassword (){
+    let password = inputpasswordEl.value.toUpperCase();
+    if (password === correctPassword.toUpperCase()) {
+        window.location.replace("Index.html")
+    }
+    else {
+        alert("Need a clue? Look closely at the letters ;)")
+    }
+}
