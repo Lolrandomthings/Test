@@ -185,9 +185,30 @@ button{
 /* NameSame.html */
 #nameJayBtn{
     background-color: #00aeff;
-    padding: 50px 70px;
+    padding: 15px 30px;
     border-radius: 4%;
     size: 100px;
-    border: #000000;
-    position: absolute;
+    border: none;
+}
+
+#fakeBtn {
+    background-color: #ffffff;
+    padding: 50px 70px;
+    border-radius: 50%;
+    size: 100px;
+    border: none;
+    position: fixed;
+    z-index: 999;
+}
+
+#secretText {
+    display: none;
+}
+
+#fakeText{
+    display: none;
+}
+
+#invisibleText{
+    color: #ffffff;
 }

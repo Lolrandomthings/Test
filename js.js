@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let openhelloEl = document.getElementById("helloBtn")
     let opensecretEl = document.getElementById("secretBtn")
     let nameJayEl = document.getElementById("nameJayBtn")
+    let fakebuttonEl = document.getElementById("fakeBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
-    if (nameJayEl) nameJayEl.addEventListener("click", addtext);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (nameEl) {
         nameEl.addEventListener("click", () => {
@@ -57,6 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setupRandomReturn(["colors", "colorsGood", "colorsBad"]); 
+
+    if (fakebuttonEl) {
+        fakebuttonEl.addEventListener("click", fakebuttonEl)
+        
+        let maxX = window.innerWidth - fakebuttonEl.offsetWidth;
+        let maxY = window.innerHeight - fakebuttonEl.offsetHeight;
+
+        let randomX = Math.floor(Math.random() * maxX)
+        let randomY = Math.floor(Math.random() * maxY)
+
+        fakebuttonEl.style.left = randomX + "px"
+        fakebuttonEl.style.top = randomY + "px"
+    }
+    if (nameJayEl) {
+        nameJayEl.addEventListener("click", () => {
+        document.getElementById("secretText").style.display = 'block';
+        });
+    }
+
+    if (fakebuttonEl) {
+        fakebuttonEl.addEventListener("click", () =>{
+        document.getElementById("fakeText").style.display = 'block';
+        });
+    }
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -166,4 +190,3 @@ function setupRandomReturn(containerIds) {
   });
 }
 
-function
