@@ -222,6 +222,6 @@ function guessPassword (){
         window.location.replace("Index.html")
     }
     else {
-        alert("Need a clue? Look closely at the letters ;)")
+        alert("Need a clue? Look closely at the text")
     }
 }
