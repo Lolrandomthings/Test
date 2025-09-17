@@ -263,3 +263,14 @@ button{
     size: 100px;
     border: none;
 }
+
+/* secretPass.html */
+#idonthavegoodnamesanymorebtn{
+    background-color: red;
+    padding: 50px 70px;
+    border-radius: 50%;
+    size: 100px;
+    border: none;
+    position: fixed;
+    z-index: 999;
+}

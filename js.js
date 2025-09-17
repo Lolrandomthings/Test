@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let fakebuttonEl = document.getElementById("fakeBtn")
     let hoverbuttonEl = document.getElementById("hoverBtn")
     let passwordEl = document.getElementById("passwordBtn")
+    let newEl = document.getElementById("idonthavegoodnamesanymorebtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -128,6 +129,7 @@ let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
 
 let correctName = "Jay"
 let correctPassword = "RedVelvetCake"
+let secretPassword = "ILoveBees"
 
 function changeColors(e) {
     e.preventDefault()
@@ -222,6 +224,9 @@ function guessPassword (){
     let password = inputpasswordEl.value.toUpperCase();
     if (password === correctPassword.toUpperCase()) {
         window.location.replace("Index.html")
+    }
+    else if (password === secretPassword.toLocaleUpperCase()){
+        window.location.replace("secretPass.html")
     }
     else {
         alert("Need a clue? Look closely at the text, the password is in there")
