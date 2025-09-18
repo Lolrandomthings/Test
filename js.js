@@ -8,13 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let fakebuttonEl = document.getElementById("fakeBtn")
     let hoverbuttonEl = document.getElementById("hoverBtn")
     let passwordEl = document.getElementById("passwordBtn")
-    let newEl = document.getElementById("idonthavegoodnamesanymorebtn")
+    let nebuttonEl = document.getElementById("idonthavegoodnamesanymorebtn")
+    let redwebbuttonEl = document.getElementById("redwebsubmitBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
     if (inputlastEl) inputlastEl.addEventListener("input", changeText);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (passwordEl) passwordEl.addEventListener("click", guessPassword);
+    if (redwebbuttonEl) redwebbuttonEl.addEventListener("click", redwebpasswordGuess)
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
@@ -106,6 +108,24 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("password").style.display = 'block';
         })
     }
+
+     if (nebuttonEl){
+        nebuttonEl.addEventListener("click", nebuttonEl)
+            let maxX = window.innerWidth - nebuttonEl.offsetWidth;
+            let maxY = window.innerHeight - nebuttonEl.offsetHeight;
+
+            let randomX = Math.floor(Math.random() * maxX)
+            let randomY = Math.floor(Math.random() * maxY)
+
+            nebuttonEl.style.left = randomX + "px"
+            nebuttonEl.style.top = randomY + "px"
+    }
+
+    if (nebuttonEl){
+        nebuttonEl.addEventListener("click", ()=> {
+            document.getElementById("redwebPassword").style.display = 'block';
+        })
+    }
 });
 
 let scrollEl = document.getElementById("scrollMenu");
@@ -117,11 +137,13 @@ let inputlastEl = document.getElementById("textinputLast");
 let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
 let inputpasswordEl = document.getElementById("inputPassword")
+let redwebpasswordEl = document.getElementById("redwebsubmit")
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6", "#e6e6fa"]
 //maybe a correct color? #a3e6fa
 
 let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
+
 
 // Maybe make in the future
 // let lettersFirst = ["J", "E", "G", "H", "Z"]
@@ -130,6 +152,7 @@ let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
 let correctName = "Jay"
 let correctPassword = "RedVelvetCake"
 let secretPassword = "ILoveBees"
+let passwordRed = "RedWebpod"
 
 function changeColors(e) {
     e.preventDefault()
@@ -230,5 +253,15 @@ function guessPassword (){
     }
     else {
         alert("Need a clue? Look closely at the text, the password is in there")
+    }
+}
+
+function redwebpasswordGuess(){
+    let password = redwebpasswordEl.value.toUpperCase();
+    if (password === passwordRed.toUpperCase()){
+        console.log("works")
+    }
+    else {
+        console.log("Blab")
     }
 }
