@@ -259,9 +259,9 @@ function guessPassword (){
 function redwebpasswordGuess(){
     let password = redwebpasswordEl.value.toUpperCase();
     if (password === passwordRed.toUpperCase()){
-        console.log("works")
+        window.location.replace("index.html")
     }
     else {
-        console.log("Blab")
+        alert("Go listen to RedWebPod then come back")
     }
 }

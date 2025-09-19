@@ -4,10 +4,6 @@
    font-size: 25px;
 }
 
-#textHeigtStyle{
-    justify-content: baseline;
-}
-
 #secretBtn{
     background-color: #e6e6fa;
     padding: 50px 70px;
@@ -43,6 +39,7 @@
     size: 100px;
     border: #000000;
     position: absolute;
+    z-index: 999;
 }
 
 
@@ -253,7 +250,7 @@ button{
     size: 100px;
     border: none;
     position: fixed;
-    z-index: 999;
+    z-index: -1;
 }
 
 #passwordBtn{
