@@ -1,7 +1,7 @@
 /* index.html */
 #body {
    background-color: #e6e6fa;
-   font-size: 25px;
+   font-size: 17px;
 }
 
 #secretBtn{
@@ -12,6 +12,14 @@
     border: none;
     position: fixed;
     z-index: 999;
+}
+
+#firstname{
+    margin: 5px;
+}
+
+#lastname{
+    margin: 5px;
 }
 
 /* bye.html */
@@ -244,13 +252,13 @@ button{
 }
 
 #hoverBtn {
-    background-color: #ffffff;
+    background-color: red;
     padding: 50px 70px;
     border-radius: 50%;
     size: 100px;
     border: none;
     position: fixed;
-    z-index: -1;
+    z-index: 999;
 }
 
 #passwordBtn{
@@ -263,11 +271,16 @@ button{
 
 /* secretPass.html */
 #idonthavegoodnamesanymorebtn{
-    background-color: red;
+    background-color: #ffffff;
     padding: 50px 70px;
     border-radius: 50%;
     size: 100px;
     border: none;
     position: fixed;
     z-index: 999;
+}
+
+/* color.html */
+#colorBody{
+    background-color:#9370db;
 }

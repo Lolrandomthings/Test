@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let passwordEl = document.getElementById("passwordBtn")
     let nebuttonEl = document.getElementById("idonthavegoodnamesanymorebtn")
     let redwebbuttonEl = document.getElementById("redwebsubmitBtn")
+    let colorbuttonEl = document.getElementById("guesscolorBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (passwordEl) passwordEl.addEventListener("click", guessPassword);
     if (redwebbuttonEl) redwebbuttonEl.addEventListener("click", redwebpasswordGuess)
+    if (colorbuttonEl) colorbuttonEl.addEventListener("click", colorGuess)
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
@@ -109,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-     if (nebuttonEl){
+    if (nebuttonEl){
         nebuttonEl.addEventListener("click", nebuttonEl)
             let maxX = window.innerWidth - nebuttonEl.offsetWidth;
             let maxY = window.innerHeight - nebuttonEl.offsetHeight;
@@ -138,6 +140,7 @@ let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
 let inputpasswordEl = document.getElementById("inputPassword")
 let redwebpasswordEl = document.getElementById("redwebsubmit")
+let colorinputEl = document.getElementById("guesscolorInput")
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6", "#e6e6fa"]
 //maybe a correct color? #a3e6fa
@@ -158,27 +161,27 @@ function changeColors(e) {
     e.preventDefault()
     let changeColors = colorEl.value.trim()
     console.log(changeColors)
-
+    
     if (CSS.supports('color', changeColors)) {
         bodyEl.style.backgroundColor = changeColors
-
+        
         if (correctColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())) {
             console.log("Correct color!")
             window.location.replace("Hello.html")
         }
-
+        
         else if (incorrectColor.map(c => c.toLowerCase()).includes(changeColors.toLowerCase())){
             console.log("Wrong, bye")
             window.location.replace("Bye.html");
         }
-
+        
         else {
             alert("Try again ")
-            bodyEl.style.backgroundColor = "#e6e6fa"
+            //bodyEl.style.backgroundColor = "#e6e6fa"
             console.log("Try again")
         }
     }
-
+    
     else {
         colorEl.style.color = "white"
     }
@@ -187,7 +190,7 @@ function changeColors(e) {
 function changeText() {
     let first = inputfirstEl.value;
     let last = inputlastEl.value
-
+    
     textEl.innerText = first + " " + last;
     helloEl.innerText = "Hello " + first + " " + last
     console.log("Name")
@@ -196,11 +199,11 @@ function changeText() {
 function changeTextTag(){
     let selectedTag = scrollEl.value;
     console.log(scrollEl.value)
-
+    
     let newEl = document.createElement(selectedTag)
     newEl.id = "text"
     newEl.innerText = sizeEl.innerText
-
+    
     sizeEl.replaceWith(newEl)
     sizeEl = newEl;
 }
@@ -229,18 +232,18 @@ function openSecretsite (){
 }
 
 function setupRandomReturn(containerIds) {
-  const buttons = containerIds
+    const buttons = containerIds
     .map(id => document.getElementById(id))
     .filter(Boolean)
     .flatMap(container => Array.from(container.querySelectorAll("button")));
-
-  if (!buttons.length) return;
-
-  const winner = buttons[Math.floor(Math.random() * buttons.length)];
-
-  winner.addEventListener("click", () => {
-    window.location.replace("Index.html");
-  });
+    
+    if (!buttons.length) return;
+    
+    const winner = buttons[Math.floor(Math.random() * buttons.length)];
+    
+    winner.addEventListener("click", () => {
+        window.location.replace("Index.html");
+    });
 }
 
 function guessPassword (){
@@ -263,5 +266,35 @@ function redwebpasswordGuess(){
     }
     else {
         alert("Go listen to RedWebPod then come back")
+    }
+}
+
+let passwordColor ="#9370bd"
+let failCount = 0;
+const hints = Array.from(document.querySelectorAll(".hint"))
+
+function revealnextHint(){
+    const nextHidden = hints.find(h => h.hidden)
+    if (nextHidden) nextHidden.hidden = false;
+}
+
+function hideallHints(){
+    hints.forEach(h => h.hidden = true)
+}
+
+function colorGuess (){
+    let password = colorinputEl.value.trim().toUpperCase();
+
+    if (password && password === passwordColor.toUpperCase()){
+        console.log("Works")
+        window.location.replace("index.html")
+        return;
+    }
+    
+    failCount++
+    console.log("Try again")
+
+    if(failCount %2 === 0) {
+        revealnextHint()
     }
 }
