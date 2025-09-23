@@ -8,12 +8,12 @@
 </head>
 <body id="colorBody">
     <div>
-        <p>Guess the color</p>
+        <h2>Guess the color</h2>
+        <h2>To go to the next page</h2>
     </div>
     <div id="guessColor">
         <input type="text" id="guesscolorInput" placeholder="Write hex code here">
         <button id="guesscolorBtn"> Submit </button>
-        <!-- #9370db, #9370bd -->
     </div>
 
     <div>
@@ -21,7 +21,10 @@
         <p class="hint" id="colorHint2" hidden>The colors hex starts with #9</p>
         <p class="hint" id="colorHint3" hidden>The next two number in the hex is 37</p>
         <p class="hint" id="colorHint4" hidden>It has the letters bd in it</p>
-        <input type="color" id="colorHint5" class="hint" name="color" value="#ff0000" hidden>
+        <div class="hint" id="colorHint5" hidden>
+            <p>Just use this</p>
+            <input type="color" name="color" value="#ff0000">
+        </div>
     </div>
 
     <script src="js.js"></script>

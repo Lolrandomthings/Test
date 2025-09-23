@@ -65,7 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     opensecretEl.style.top = randomY + "px"
     }
 
-    setupRandomReturn(["colors", "colorsGood", "colorsBad"]); 
+    setupRandomReturnGood(["colorsGood"]); 
+    setupRandomReturnBad(["colorsBad"])
 
     if (fakebuttonEl) {
         fakebuttonEl.addEventListener("click", fakebuttonEl)
@@ -231,7 +232,7 @@ function openSecretsite (){
     window.location.replace("Secret.html")
 }
 
-function setupRandomReturn(containerIds) {
+function setupRandomReturnGood(containerIds) {
     const buttons = containerIds
     .map(id => document.getElementById(id))
     .filter(Boolean)
@@ -244,6 +245,21 @@ function setupRandomReturn(containerIds) {
     winner.addEventListener("click", () => {
         window.location.replace("Index.html");
     });
+}
+
+function setupRandomReturnBad(containerIds){
+    const buttons = containerIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean)
+    .flatMap(container => Array.from(container.querySelectorAll("button")))
+
+    if(!buttons.length) return;
+
+    const winner = buttons[Math.floor(Math.random() * buttons.length)]
+
+    winner.addEventListener("click", () => {
+        window.location.replace("color.html")
+    })
 }
 
 function guessPassword (){
