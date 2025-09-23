@@ -225,7 +225,7 @@ function nameIsCorrect() {
 
 function openSite (){
     console.log("Clicked")
-    window.location.replace("Index.html")
+    window.location.replace("text.html")
 }
 
 function openSecretsite (){
