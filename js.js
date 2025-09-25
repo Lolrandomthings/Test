@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
-    if (inputlastEl) inputlastEl.addEventListener("input", changeText);
     if (scrollEl) scrollEl.addEventListener("change", changeTextTag);
     if (passwordEl) passwordEl.addEventListener("click", guessPassword);
     if (redwebbuttonEl) redwebbuttonEl.addEventListener("click", redwebpasswordGuess)
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (openbyeEl) {
-        openbyeEl.addEventListener("click", openSite);
+        openbyeEl.addEventListener("click", openByeSite);
         
     let maxX = window.innerWidth - openbyeEl.offsetWidth;
     let maxY = window.innerHeight - openbyeEl.offsetHeight;
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (openhelloEl) {
-        openhelloEl.addEventListener("click", openSite)
+        openhelloEl.addEventListener("click", openHelloSite)
 
     let maxX = window.innerWidth - openhelloEl.offsetWidth;
     let maxY = window.innerHeight - openhelloEl.offsetHeight;
@@ -141,27 +140,24 @@ let bodyEl = document.getElementById("body")
 let colorEl = document.getElementById("color")
 let sizeEl = document.getElementById("textHeigt")
 let inputfirstEl = document.getElementById("textinputFirst"); 
-let inputlastEl = document.getElementById("textinputLast");
 let textEl = document.getElementById("textWrite")
 let helloEl = document.getElementById("helloWrite")
 let inputpasswordEl = document.getElementById("inputPassword")
 let redwebpasswordEl = document.getElementById("redwebsubmit")
 let colorinputEl = document.getElementById("guesscolorInput")
+let textinputEl = document.getElementById("textInput")
+let textDarkEl = document.getElementById("darkInput")
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6", "#e6e6fa"]
-//maybe a correct color? #a3e6fa
-
 let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
-
-
-//Maybe make in the future
-//let lettersFirst = ["J", "E", "G", "H", "Z"]
-//let lettersLast = ["Q","D","M","N","F"]
+let passwordColor ="#9370bd"
 
 let correctName = "Jay"
 let correctPassword = "RedVelvetCake"
 let secretPassword = "ILoveBees"
 let passwordRed = "RedWebpod"
+let textpassword = "YDOIHAVETO"
+let darkPassword = "Laura Fabiola Sanchez Ayala"
 
 function changeColors(e) {
     e.preventDefault()
@@ -195,10 +191,9 @@ function changeColors(e) {
 
 function changeText() {
     let first = inputfirstEl.value;
-    let last = inputlastEl.value
     
-    textEl.innerText = first + " " + last;
-    helloEl.innerText = "Hello " + first + " " + last
+    textEl.innerText = first
+    helloEl.innerText = "Hello " + first
     console.log("Name")
 }
 
@@ -217,8 +212,7 @@ function changeTextTag(){
 function helloPerson(){
     console.log(inputfirstEl.value)
     let personfirstName = inputfirstEl.value;
-    let personlastName = inputlastEl.value
-    alert("Hello " + personfirstName + " " + personlastName)
+    alert("Hello " + personfirstName)
 }
 
 function nameIsCorrect() {
@@ -228,9 +222,14 @@ function nameIsCorrect() {
     }
 }
 
-function openSite (){
+function openByeSite (){
     console.log("Clicked")
     window.location.replace("text.html")
+}
+
+function openHelloSite (){
+    console.log("Clicked")
+    window.location.replace("index.html")
 }
 
 function openSecretsite (){
@@ -270,7 +269,7 @@ function setupRandomReturnBad(containerIds){
 function guessPassword (){
     let password = inputpasswordEl.value.toUpperCase();
     if (password === correctPassword.toUpperCase()) {
-        window.location.replace("Index.html")
+        window.location.replace("redvelvetcake.html")
     }
     else if (password === secretPassword.toLocaleUpperCase()){
         window.location.replace("secretPass.html")
@@ -290,7 +289,6 @@ function redwebpasswordGuess(){
     }
 }
 
-let passwordColor ="#9370bd"
 let failCount = 0;
 const hints = Array.from(document.querySelectorAll(".hint"))
 
@@ -320,9 +318,6 @@ function colorGuess (){
     }
 }
 
-let textpassword = "YDOIHAVETO"
-let textinputEl = document.getElementById("textInput")
-
 function textpasswordGuess(){
     let password = textinputEl.value.toUpperCase()
 
@@ -333,13 +328,11 @@ function textpasswordGuess(){
     }
 }
 
-let darkPassword = "Laura Fabiola Sanchez Ayala"
-let textDarkEl = document.getElementById("darkInput")
-
 function friendpasswordGuess(){
     let password = textDarkEl.value.toUpperCase()
 
     if(password === darkPassword.toUpperCase()){
-        console.log("Correct")
+        //console.log("Correct")
+        window.location.replace("index.html")
     }
 }
