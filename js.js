@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let nebuttonEl = document.getElementById("idonthavegoodnamesanymorebtn")
     let redwebbuttonEl = document.getElementById("redwebsubmitBtn")
     let colorbuttonEl = document.getElementById("guesscolorBtn")
+    let textbtnEl = document.getElementById("textsubmitBtn")
+    let darkbtnEl = document.getElementById("darksubmitBtn")
+
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -19,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (passwordEl) passwordEl.addEventListener("click", guessPassword);
     if (redwebbuttonEl) redwebbuttonEl.addEventListener("click", redwebpasswordGuess)
     if (colorbuttonEl) colorbuttonEl.addEventListener("click", colorGuess)
+    if (textbtnEl) textbtnEl.addEventListener("click", textpasswordGuess)
+    if (darkbtnEl) darkbtnEl.addEventListener("click", friendpasswordGuess)
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
@@ -149,9 +154,9 @@ let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00f
 let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
 
 
-// Maybe make in the future
-// let lettersFirst = ["J", "E", "G", "H", "Z"]
-// let lettersLast = ["Q","D","M","N","F"]
+//Maybe make in the future
+//let lettersFirst = ["J", "E", "G", "H", "Z"]
+//let lettersLast = ["Q","D","M","N","F"]
 
 let correctName = "Jay"
 let correctPassword = "RedVelvetCake"
@@ -178,7 +183,7 @@ function changeColors(e) {
         
         else {
             alert("Try again ")
-            //bodyEl.style.backgroundColor = "#e6e6fa"
+                bodyEl.style.backgroundColor = "#e6e6fa"
             console.log("Try again")
         }
     }
@@ -312,5 +317,29 @@ function colorGuess (){
 
     if(failCount %2 === 0) {
         revealnextHint()
+    }
+}
+
+let textpassword = "YDOIHAVETO"
+let textinputEl = document.getElementById("textInput")
+
+function textpasswordGuess(){
+    let password = textinputEl.value.toUpperCase()
+
+    if(password === textpassword.toUpperCase()){
+        //console.log("Correct")
+        alert("9 is a cool number. Dont you think? Also lets go to the next page ->")
+        window.location.replace("dark.html")
+    }
+}
+
+let darkPassword = "Laura Fabiola Sanchez Ayala"
+let textDarkEl = document.getElementById("darkInput")
+
+function friendpasswordGuess(){
+    let password = textDarkEl.value.toUpperCase()
+
+    if(password === darkPassword.toUpperCase()){
+        console.log("Correct")
     }
 }

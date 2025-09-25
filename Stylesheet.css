@@ -287,12 +287,16 @@ button{
 }
 
 /* text.html */
-#textinputBtn{
-    background-color: red;
-    padding: 50px 70px;
-    border-radius: 50%;
+#textsubmitBtn{
+    background-color: #00aeff;
+    padding: 15px 30px;
+    border-radius: 4%;
     size: 100px;
     border: none;
-    position: fixed;
-    z-index: 999;
+}
+
+/* dark.html */
+#darkBody{
+    background-color: #000000;
+    color: white;
 }

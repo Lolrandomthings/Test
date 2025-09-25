@@ -1,0 +1,53 @@
+I just need to write some text to use as a base for the cecar Cipher
+
+Lets see. 
+
+Finally managed to solve this huh, I am suprised
+You probably thought you would get an easy answer to the password, it wont though. Does it even have a password in it?
+Guess will never know
+Or will we
+You know, as I have said before I really like making these challenges, its a fun way to learn JavaScript
+Plus I get to create something fun I can continue to use when I want to show off my knowlege of puzzles
+I have to give some credit to Laura Fabiola Sanchez Ayala my friend though for giving me the inspiration for this page though
+I also have to say that, while making this I have no idea what im doing
+Or what Im going to write. It mostly just goes on whatever ideas I have while writing
+Like this whole project tbh. So if it seems weird or unorganized... thats just what it is
+Now, for a password... still not getting it.
+I am writing this in an md file before taking it over to te actual HTML page it should go on
+I really hope it will make sense what im doing soon
+Also when I said I was stuck at the office Im not realy stuck
+More like I have more work to do.
+And now Im litterally just writing this to make sure I have a lot of text to waist your time.
+Now where could that password be.
+Who knows, well I should know
+Do I know? Or is there really not only me making this and there is one person coding and one person writing all of the text
+Who knows... again I should know
+Also the cecar cipher is moveb by 9, because I wanted to have it go from a to J because my name starts with J
+I also wanted to put in the number in the text, so... your welcome.
+And if you read all this. 
+Thanks
+
+Orwjuuh vjwjpnm cx bxuen cqrb qdq, R jv bdyarbnm
+Hxd yaxkjkuh cqxdpqc hxd fxdum pnc jw njbh jwbfna cx cqn yjbbfxam, rc fxwc cqxdpq. Mxnb rc nenw qjen j yjbbfxam rw rc?
+Pdnbb fruu wnena twxf
+Xa fruu fn
+Hxd twxf, jb R qjen bjrm knoxan R anjuuh urtn vjtrwp cqnbn lqjuunwpnb, rcb j odw fjh cx unjaw SjejBlaryc
+Yudb R pnc cx lanjcn bxvncqrwp odw R ljw lxwcrwdn cx dbn fqnw R fjwc cx bqxf xoo vh twxfunpn xo ydiiunb
+R qjen cx pren bxvn lanmrc cx Ujdaj Ojkrxuj Bjwlqni Jhjuj vh oarnwm cqxdpq oxa prerwp vn cqn rwbyrajcrxw oxa cqrb yjpn cqxdpq
+R jubx qjen cx bjh cqjc, fqrun vjtrwp cqrb R qjen wx rmnj fqjc rv mxrwp
+Xa fqjc Rv pxrwp cx farcn. Rc vxbcuh sdbc pxnb xw fqjcnena rmnjb R qjen fqrun farcrwp
+Urtn cqrb fqxun yaxsnlc ckq. Bx ro rc bnnvb fnram xa dwxapjwrinm... cqjcb sdbc fqjc rc rb
+Wxf, oxa j yjbbfxam... bcruu wxc pnccrwp rc.
+R jv farcrwp cqrb rw jw vm orun knoxan cjtrwp rc xena cx cn jlcdju QCVU yjpn rc bqxdum px xw
+R anjuuh qxyn rc fruu vjtn bnwbn fqjc rv mxrwp bxxw
+Jubx fqnw R bjrm R fjb bcdlt jc cqn xoorln Rv wxc anjuh bcdlt
+Vxan urtn R qjen vxan fxat cx mx.
+Jwm wxf Rv urccnajuuh sdbc farcrwp cqrb cx vjtn bdan R qjen j uxc xo cngc cx fjrbc hxda crvn.
+Wxf fqnan lxdum cqjc yjbbfxam kn.
+Fqx twxfb, fnuu R bqxdum twxf
+Mx R twxf? Xa rb cqnan anjuuh wxc xwuh vn vjtrwp cqrb jwm cqnan rb xwn ynabxw lxmrwp jwm xwn ynabxw farcrwp juu xo cqn cngc
+Fqx twxfb... jpjrw R bqxdum twxf
+Jubx cqn lnlja lryqna rb vxenk kh 9, knljdbn R fjwcnm cx qjen rc px oaxv j cx S knljdbn vh wjvn bcjacb frcq S
+R jubx fjwcnm cx ydc rw cqn wdvkna rw cqn cngc, bx... hxda fnulxvn.
+Jwm ro hxd anjm juu cqrb. 
+Cqjwtb
