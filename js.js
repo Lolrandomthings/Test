@@ -229,7 +229,7 @@ function openByeSite (){
 
 function openHelloSite (){
     console.log("Clicked")
-    window.location.replace("index.html")
+    window.location.replace("something.html")
 }
 
 function openSecretsite (){

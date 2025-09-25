@@ -1,15 +1,15 @@
 Index 
     - Secret(get the A)
         - Color
-            - 
-    - Bye
+            - (Morse?)
+    - Bye (Get the J)
         - Text
-            - Dark (Get the J through Cesar Cipher)
+            - Dark (Cesar Cipher to get the clue)
     - Hello(Get the Y)
-        - 
-            - 
+        - something
+            - (Secret text in console? or flashing text)
     - NameSame(Have to find the name first)
         - RedVelvetcake
-            -
+            - 
         - SecretPass (I love Bees)
-            - Index 
+            - (Take to red web?) 
