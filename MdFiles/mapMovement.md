@@ -7,9 +7,9 @@ Index
             - Dark (Cesar Cipher to get the clue)
     - Hello(Get the Y)
         - something
-            - (Secret text in console? or flashing text)
+            - consloe (Secret text in console? or flashing text)
     - NameSame(Have to find the name first)
         - RedVelvetcake
-            - 
+            - Index
         - SecretPass (I love Bees)
             - (Take to red web?) 

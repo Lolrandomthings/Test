@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let colorbuttonEl = document.getElementById("guesscolorBtn")
     let textbtnEl = document.getElementById("textsubmitBtn")
     let darkbtnEl = document.getElementById("darksubmitBtn")
-
+    let nobtnEl = document.getElementById("buttonNo")
+    let yesbtnEl = document.getElementById("buttonYes")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (colorbuttonEl) colorbuttonEl.addEventListener("click", colorGuess)
     if (textbtnEl) textbtnEl.addEventListener("click", textpasswordGuess)
     if (darkbtnEl) darkbtnEl.addEventListener("click", friendpasswordGuess)
+    if (yesbtnEl) yesbtnEl.addEventListener("click", nextclueClick)
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
@@ -131,6 +133,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nebuttonEl){
         nebuttonEl.addEventListener("click", ()=> {
             document.getElementById("redwebPassword").style.display = 'block';
+        })
+    }
+
+    if (nobtnEl) {
+        let firstHover = true;
+        nobtnEl.addEventListener("click", goodbyeClick)
+        nobtnEl.addEventListener("mouseover", ()=>{
+            if(firstHover){
+                firstHover = true;
+            }
+
+            let maxX = window.innerWidth - nobtnEl.offsetWidth;
+            let maxY = window.innerHeight - nobtnEl.offsetHeight;
+
+            let randomX = Math.floor(Math.random() * maxX)
+            let randomY = Math.floor(Math.random() * maxY)
+
+            nobtnEl.style.left = randomX + "px"
+            nobtnEl.style.top = randomY + "px"
         })
     }
 });
@@ -322,7 +343,6 @@ function textpasswordGuess(){
     let password = textinputEl.value.toUpperCase()
 
     if(password === textpassword.toUpperCase()){
-        //console.log("Correct")
         alert("9 is a cool number. Dont you think? Also lets go to the next page ->")
         window.location.replace("dark.html")
     }
@@ -332,7 +352,16 @@ function friendpasswordGuess(){
     let password = textDarkEl.value.toUpperCase()
 
     if(password === darkPassword.toUpperCase()){
-        //console.log("Correct")
         window.location.replace("index.html")
     }
+}
+
+function goodbyeClick(){
+    alert("Awww, well goodbye")
+    window.close()
+}
+
+function nextclueClick(){
+    alert("Thank you <3")
+    window.location.replace("console.html")
 }

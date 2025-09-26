@@ -305,3 +305,20 @@ button{
 #somethingBody{
     background-color: #e6e6fa ;
 }
+
+#buttonYes {
+    background-color: #00aeff;
+    padding: 15px 15px;
+    border-radius: 4%;
+    size: 100px;
+    border: none;
+}
+
+#buttonNo {
+    background-color: #00aeff;
+    padding: 15px 15px;
+    border-radius: 4%;
+    size: 100px;
+    border: none;
+    position: absolute;
+}
