@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let darkbtnEl = document.getElementById("darksubmitBtn")
     let nobtnEl = document.getElementById("buttonNo")
     let yesbtnEl = document.getElementById("buttonYes")
+    let colsolebtnEl = document.getElementById("consoleBtn")
+    let consoleHomeBtnEl = document.getElementById("consoleIndexBtn")
     
     if (submitEl) submitEl.addEventListener("click", changeColors);
     if (inputfirstEl) inputfirstEl.addEventListener("input", changeText);
@@ -25,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (textbtnEl) textbtnEl.addEventListener("click", textpasswordGuess)
     if (darkbtnEl) darkbtnEl.addEventListener("click", friendpasswordGuess)
     if (yesbtnEl) yesbtnEl.addEventListener("click", nextclueClick)
+    if (colsolebtnEl) colsolebtnEl.addEventListener("click", consoleGuess)
+    if (consoleHomeBtnEl) consoleHomeBtnEl.addEventListener("click", goHome)
     if (nameEl) {
         nameEl.addEventListener("click", () => {
             helloPerson();
@@ -168,6 +172,7 @@ let redwebpasswordEl = document.getElementById("redwebsubmit")
 let colorinputEl = document.getElementById("guesscolorInput")
 let textinputEl = document.getElementById("textInput")
 let textDarkEl = document.getElementById("darkInput")
+let textconsoleEl = document.getElementById("consoleInput")
 
 let correctColor = ["#b7d4e1", "#00aeff", "#00aaff", "#FFFFFF", "#005885", "#00fbff", "#004466", "#0c73a6", "#e6e6fa"]
 let incorrectColor = ["#000000", "#ff0000", "#00ff00", "#0000ff"]
@@ -179,6 +184,7 @@ let secretPassword = "ILoveBees"
 let passwordRed = "RedWebpod"
 let textpassword = "YDOIHAVETO"
 let darkPassword = "Laura Fabiola Sanchez Ayala"
+let consolePassword = "Jazz"
 
 function changeColors(e) {
     e.preventDefault()
@@ -364,4 +370,20 @@ function goodbyeClick(){
 function nextclueClick(){
     alert("Thank you <3")
     window.location.replace("console.html")
+}
+
+function consoleGuess(){
+    let password = textconsoleEl.value.toUpperCase()
+
+    if(password === consolePassword.toUpperCase()){
+        console.log("You actually thought there would be a clue here?")
+    }
+    else{
+        console.log("The letter is Y")
+        console.log("Now how to get back to index? Maybe a button?")
+    }
+}
+
+function goHome(){
+    window.location.replace("index.html")
 }

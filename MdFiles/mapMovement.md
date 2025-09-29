@@ -7,7 +7,7 @@ Index
             - Dark (Cesar Cipher to get the clue)
     - Hello(Get the Y)
         - something
-            - consloe (Secret text in console? or flashing text)
+            - consloe (Console after answering a question wrong (To keep things exciting))
     - NameSame(Have to find the name first)
         - RedVelvetcake
             - Index
