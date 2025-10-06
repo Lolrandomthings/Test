@@ -206,7 +206,7 @@ function changeColors(e) {
         
         else {
             alert("Try again ")
-                bodyEl.style.backgroundColor = "#e6e6fa"
+            bodyEl.style.backgroundColor = "#e6e6fa"
             console.log("Try again")
         }
     }

@@ -345,3 +345,16 @@ button{
     border: none;
     position: absolute;
 }
+
+/* redvelvetcake.html */
+#velvetBtn{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 40px 15px;
+    border-radius: 4%;
+    size: 100px;
+    border: none;
+    position: absolute;
+}
+
