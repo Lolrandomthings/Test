@@ -333,7 +333,7 @@ function colorGuess (){
 
     if (password && password === passwordColor.toUpperCase()){
         console.log("Works")
-        window.location.replace("index.html")
+        window.location.replace("anotherPage.html")
         return;
     }
     

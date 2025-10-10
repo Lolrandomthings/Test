@@ -3,7 +3,7 @@
 Index %
     - Secret(get the A)%
         - Color %
-            - (Morse?)
+            - anotherPage(Morse?)
     - Bye (Get the J)%
         - Text %
             - Dark (Cesar Cipher to get the clue) %
